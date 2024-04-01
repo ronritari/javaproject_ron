@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello admin</h1>
+<div></div>
+
+<link rel="stylesheet" href="style.css">
+
+<h2>Students Table</h2>
+<div id="studentContainer"></div>
+<h2>Courses Table</h2>
+<div id="coursesContainer"></div>
+<button id="refreshButton">Refresh Data</button>
+<script src="../table.js"></script>
+<script src="../refresh.js"></script>
+</div>
+<p>-------------------------------------------------------------------------</p>
+
+<label for="studentIdInput">Enter Student ID:</label>
+<input type="text" id="studentIdInput">
+<button id="studentIdButton" onclick="fetchStudentDetails()">Fetch Student Details</button>
+
+<div id="studentDetailsContainer">
+    <!-- Student details will be displayed here -->
+</div>
+
+<label for="courseIdInput">Enter Course ID:</label>
+<input type="text" id="courseIdInput">
+<button id="courseIdButton" onclick="fetchCourseDetails()">Fetch Course Details</button>
+
+<div id="courseDetailsContainer">
+    <!-- Course details will be displayed here -->
+</div>
+<script src="../search.js"></script>
+
+<p>-------------------------------------------------------------------------</p>
+<h2>Add/Edit/Delete Students</h2>
+<p>fill all textboxes to add new student</p>
+<p>fill the id of the student you want to update and fill the textboxes you want to update</p>
+<p>fill the id of the student you want to delete</p>
+
+<div>
+<label for="newStudentId">Enter Student ID:</label>
+<input type="text" id="newStudentId">
+</div>
+
+<div>
+<label for="newStudentFirstname">Enter Student firstname:</label>
+<input type="text" id="newStudentFirstname">
+</div>
+
+<div>
+<label for="newStudentLastname">Enter Student lastname:</label>
+<input type="text" id="newStudentLastname">
+</div>
+
+<div>
+<label for="newStudentEmail">Enter Student email:</label>
+<input type="text" id="newStudentEmail">
+</div>
+
+<div>
+<button id="addStudentButton" onclick="addStudent()">Add Student</button>
+</div>
+
+<div>
+<button id="updateStudentButton" onclick="updateStudent()">Update Student</button>
+</div>
+
+<div>
+<button id="deleteStudentButton" onclick="deleteStudent()" >Delete Student</button>
+</div>
+
+<script src="add/addStudent.js"></script>
+<script src="update/updateStudent.js"></script>
+<script src="delete/deleteStudentbyID.js"></script>
+
+<p>-------------------------------------------------------------------------</p>
+<h2>Add/Edit/Delete Courses</h2>
+
+<p>fill all textboxes to add new course</p>
+<p>fill the id of the course you want to update and fill the textboxes you want to update</p>
+<p>fill the id of the course you want to delete</p>
+
+<div>
+    <label for="newCourseId">Enter Course ID:</label>
+    <input type="text" id="newCourseId">
+</div>
+
+<div>
+    <label for="newCoursename">Enter Course name:</label>
+    <input type="text" id="newCoursename">
+</div>
+
+<div>
+    <label for="newCourseTeacher">Enter Course teacher:</label>
+    <input type="text" id="newCourseTeacher">
+</div>
+
+<div>
+    <button id="addCourseButton" onclick="addCourse()">Add Course</button>
+</div>
+
+<div>
+    <button id="updateCourseButton" onclick="updateCourse()">Update Course</button>
+</div>
+
+<div>
+    <button id="deleteCourseButton" onclick="deleteCourse()" >Delete Course</button>
+</div>
+
+<script src="add/addCourse.js"></script>
+<script src="update/updateCourse.js"></script>
+<script src="delete/deleteCourse.js"></script>
+
+<script src="Admin.js"></script>
+</body>
+</html>

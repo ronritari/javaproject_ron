@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css">
+<h2>Students Table</h2>
+<div id="studentContainer"></div>
+<h2>Courses Table</h2>
+<div id="coursesContainer"></div>
+<script src="table.js"></script>
+<script src="refresh.js"></script>
+<p>-------------------------------------------------------------------------</p>
+
+<label for="studentIdInput">Enter Student ID:</label>
+<input type="text" id="studentIdInput">
+<button id="studentIdButton" onclick="fetchStudentDetails()">Fetch Student Details</button>
+
+<div id="studentDetailsContainer">
+    <!-- Student details will be displayed here -->
+</div>
+<p>-------------------------------------------------------------------------</p>
+<label for="courseIdInput">Enter Course ID:</label>
+<input type="text" id="courseIdInput">
+<button id="courseIdButton" onclick="fetchCourseDetails()">Fetch Course Details</button>
+
+<div id="courseDetailsContainer">
+    <!-- Course details will be displayed here -->
+</div>
+
+<script src="search.js"></script>
+<p>-------------------------------------------------------------------------</p>
+<h2>Login</h2>
+<form id="loginForm" th:action="@{/login}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Login</button>
+</form>
+<script src="login.js"></script>
+
+</body>
+</html>
